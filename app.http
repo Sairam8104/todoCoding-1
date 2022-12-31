@@ -1,14 +1,14 @@
 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
 ###
-GET http://localhost:3000/todos/1
+GET http://localhost:3000/todos/42
 
 ###
 
 POST http://localhost:3000/todos
-Content-Type: application/json;
+Content-Type: application/json
 
 {
- "id": 6,
+ "id":42 ,
  "todo": "Finalize event theme",
  "priority": "LOW",
  "status": "TO DO",
@@ -20,4 +20,8 @@ Content-Type: application/json;
 PUT http://localhost:3000/todos/1
 Content-Type: application/json;
 
-{ "dueDate": "2021-01-12" }
+{ "priority": "HIGH" }
+ 
+###
+
+GET http://localhost:3000/todos/?priority=LOW
